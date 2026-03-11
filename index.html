@@ -163,8 +163,8 @@ body::before{content:'';position:fixed;inset:0;z-index:9999;pointer-events:none;
 .light-theme .continue-card{background:linear-gradient(135deg,#f7f4e0,#f0ece8);border-color:rgba(122,92,16,.25);}
 .light-theme .famous-card{background:#f5f2dc;border-color:rgba(122,92,16,.22);}
 .light-theme .home-bk-chip{background:#f5f2dc;border-color:rgba(122,92,16,.22);}
-.light-theme #mushaf-flipbook-card{background:linear-gradient(145deg,var(--surface-light),var(--surface-card)) !important;border-color:var(--gold-border) !important;}
-.light-theme .mushaf-placeholder{background:linear-gradient(135deg,#f7f4e0,#f0ece8);}
+.light-theme #mushaf-flipbook-card{background:linear-gradient(145deg,var(--surface),var(--surface-card)) !important;border-color:var(--gold-border) !important;}
+.light-theme .mushaf-placeholder{background:linear-gradient(135deg,var(--surface),var(--surface-card));}
 .light-theme .home-search-input{background:#f7f4e0;border-color:rgba(122,92,16,.25);color:#442F1B;}
 .light-theme .ramadan-card{background:linear-gradient(135deg,#faf8e8,#f5f2d8,#faf8e8);}
 .light-theme .home-bk-scroll > div{color:#5E3E22;}
@@ -274,7 +274,7 @@ body::before{content:'';position:fixed;inset:0;z-index:9999;pointer-events:none;
 .home-bk-chip-ref{font-size:.6rem;color:var(--gold);letter-spacing:2px;margin-bottom:4px}
 .home-bk-chip-ar{font-family:var(--ar-font);font-size:1.4rem;direction:rtl;text-align:right;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 
-.mushaf-placeholder{background:linear-gradient(135deg,var(--surface-light),var(--surface-card));border:1px solid var(--gold-border);border-radius:18px;padding:24px 20px;text-align:center;margin-bottom:20px;position:relative;overflow:hidden;cursor:pointer;transition:border-color .25s}
+.mushaf-placeholder{background:linear-gradient(135deg,var(--surface),var(--surface-card));border:1px solid var(--gold-border);border-radius:18px;padding:24px 20px;text-align:center;margin-bottom:20px;position:relative;overflow:hidden;cursor:pointer;transition:border-color .25s}
 .mushaf-placeholder:hover{border-color:rgba(212,175,55,.45)}
 .mushaf-placeholder::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23d4af37' fill-opacity='0.04'%3E%3Cpath d='M20 0L0 20 20 40 40 20z'/%3E%3C/g%3E%3C/svg%3E");opacity:1}
 .mushaf-placeholder-icon{font-family:var(--ar-font);font-size:2.8rem;color:var(--gold);direction:rtl;line-height:2;margin-bottom:8px;position:relative;opacity:.6}
@@ -303,7 +303,7 @@ body::before{content:'';position:fixed;inset:0;z-index:9999;pointer-events:none;
 .surah-info-btn:active { transform: scale(0.9); }
 .surah-info-btn svg { width: 16px; height: 16px; fill: currentColor; }
 
-.verse-card{padding:26px 0 26px 12px;border-bottom:1px solid var(--border-soft);position:relative;border-left:3px solid transparent;opacity:0;transform:translateY(10px);transition:opacity .45s,transform .45s,border-left-color .35s,background .35s,padding-left .3s}
+.verse-card{padding:26px 0 26px 12px;border-bottom:1px solid var(--border-soft);position:relative;border-left:3px solid transparent;opacity:1;transform:translateY(0);transition:border-left-color .35s,background .35s,padding-left .3s}
 .verse-card.visible{opacity:1;transform:translateY(0)}
 .verse-card.active-verse{border-left-color:var(--gold);background:var(--gold-soft);padding-left:20px}
 .verse-meta-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
@@ -1214,12 +1214,12 @@ body::before{content:'';position:fixed;inset:0;z-index:9999;pointer-events:none;
       <div id="home-mushaf-section" style="margin-bottom:24px;display:flex;flex-direction:column;gap:12px">
 
         <!-- Primary Flipbook Card -->
-        <div id="mushaf-flipbook-card" onclick="MushafFlipbook.promptOpenMode()" style="position:relative;border-radius:18px;border:1px solid var(--gold-border);background:linear-gradient(145deg,var(--surface-light),var(--surface-card));padding:18px 18px 14px;cursor:pointer;overflow:hidden;transition:border-color .28s,transform .22s,box-shadow .28s;-webkit-tap-highlight-color:transparent;">
-          <div style="position:absolute;inset:0;pointer-events:none;background:url(\"data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23d4af37' fill-opacity='0.04'%3E%3Cpath d='M40 0L0 40 40 80 80 40z'/%3E%3C/g%3E%3C/svg%3E\")"></div>
-          <div style="position:absolute;top:-30px;right:-30px;width:160px;height:160px;pointer-events:none;background:radial-gradient(circle,rgba(212,175,55,.1),transparent 70%)"></div>
+        <div id="mushaf-flipbook-card" onclick="MushafFlipbook.promptOpenMode()" style="position:relative;border-radius:18px;border:1px solid var(--gold-border);background:linear-gradient(145deg,var(--surface),var(--surface-card));padding:18px 18px 14px;cursor:pointer;overflow:hidden;transition:border-color .28s,transform .22s,box-shadow .28s;-webkit-tap-highlight-color:transparent;">
+          <div style="position:absolute;inset:0;pointer-events:none;background:url(\"data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23d4af37' fill-opacity='0.03'%3E%3Cpath d='M40 0L0 40 40 80 80 40z'/%3E%3C/g%3E%3C/svg%3E\")"></div>
+          <div style="position:absolute;top:-30px;right:-30px;width:160px;height:160px;pointer-events:none;background:radial-gradient(circle,rgba(212,175,55,.12),transparent 70%)"></div>
           <div style="display:flex;align-items:center;gap:14px;position:relative;z-index:1">
-            <div style="width:52px;height:64px;flex-shrink:0;background:linear-gradient(160deg,rgba(212,175,55,.2),rgba(212,175,55,.06));border:1px solid var(--gold-border);border-radius:8px;display:flex;align-items:center;justify-content:center;box-shadow:inset 0 0 20px rgba(212,175,55,.1),2px 2px 12px rgba(0,0,0,.25);position:relative">
-              <div style="position:absolute;top:2px;left:2px;right:2px;bottom:2px;border:1px solid rgba(212,175,55,.12);border-radius:6px;pointer-events:none"></div>
+            <div style="width:52px;height:64px;flex-shrink:0;background:linear-gradient(160deg,rgba(212,175,55,.18),rgba(212,175,55,.04));border:1px solid var(--gold-border);border-radius:8px;display:flex;align-items:center;justify-content:center;box-shadow:inset 0 0 20px rgba(212,175,55,.08),2px 2px 12px rgba(0,0,0,.4);position:relative">
+              <div style="position:absolute;top:2px;left:2px;right:2px;bottom:2px;border:1px solid rgba(212,175,55,.1);border-radius:6px;pointer-events:none"></div>
               <div style="font-family:var(--ar-font);font-size:1.5rem;color:var(--gold);direction:rtl;line-height:1.4">مصحف</div>
             </div>
             <div style="flex:1;min-width:0">
@@ -1239,7 +1239,7 @@ body::before{content:'';position:fixed;inset:0;z-index:9999;pointer-events:none;
             <span style="font-family:'Josefin Sans',sans-serif;font-size:.52rem;letter-spacing:2px;text-transform:uppercase;color:var(--gold);background:var(--gold-soft);border:1px solid var(--gold-border);border-radius:100px;padding:4px 10px">3D Flipbook</span>
           </div>
           <!-- Bookmark ribbon -->
-          <div id="mfv-home-ribbon" style="display:none;position:absolute;top:12px;right:12px;z-index:5;font-family:'Josefin Sans',sans-serif;font-size:.52rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);background:var(--gold-soft);border:1px solid var(--gold-border);border-radius:100px;padding:5px 10px;align-items:center;gap:5px">
+          <div id="mfv-home-ribbon" style="display:none;position:absolute;top:12px;right:12px;z-index:5;font-family:'Josefin Sans',sans-serif;font-size:.52rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);background:linear-gradient(135deg,rgba(212,175,55,.2),rgba(212,175,55,.08));border:1px solid var(--gold-border);border-radius:100px;padding:5px 10px;align-items:center;gap:5px">
             <svg viewBox="0 0 24 24" width="12" height="12" fill="currentColor"><path d="M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2z"/></svg>
             Page <span id="mfv-ribbon-page">1</span>
           </div>
@@ -1738,7 +1738,7 @@ body::before{content:'';position:fixed;inset:0;z-index:9999;pointer-events:none;
     <div id="mfv-error-screen">
       <div class="mfv-err-icon">📖</div>
       <div class="mfv-err-title">Mushaf Unavailable</div>
-      <div class="mfv-err-msg" id="mfv-err-msg">Unable to load. Please check your connection and try again.</div>
+      <div class="mfv-err-msg" id="mfv-err-msg">Unable to load. Please check your connection.</div>
       <button class="mfv-err-btn" onclick="MushafFlipbook.retryLoad()">Try Again</button>
     </div>
 
@@ -2833,7 +2833,7 @@ const App={
   },
 
   updateContinueCard(){
-    const s=this.s.currentSurah||1,a=this.s.currentAyah||1;
+    const s=this.s.currentSurah,a=this.s.currentAyah||1;
     const meta=this.s.surahList.find(x=>x.number===s);
     const nm=meta?meta.englishName:`Surah ${s}`;
     const juz=getJuz(s,a);
@@ -2842,25 +2842,18 @@ const App={
     elSet('continue-meta',`Surah ${s} · Ayah ${a} · Juz ${juz}`);
     const arEl=document.getElementById('continue-ar');
     const trEl=document.getElementById('continue-tr');
-    // Only use fullSurah data if it actually matches the current surah
-    const ayahData=(this.s.fullSurah&&this.s.fullSurah.length&&s===this.s.currentSurah)?this.s.fullSurah[a-1]:null;
-    if(arEl&&ayahData&&ayahData.words&&ayahData.words.length){
-      arEl.textContent=ayahData.words.filter(w=>w.char_type_name!=='end').map(w=>w.text_indopak||w.text).join(' ');
-    } else if(arEl) {
-      arEl.textContent='';
+    const ayahData=(this.s.fullSurah&&this.s.fullSurah.length&&this.s.currentSurah===s)?this.s.fullSurah[a-1]:null;
+    if(arEl){
+      if(ayahData&&ayahData.words&&ayahData.words.length){
+        arEl.textContent=ayahData.words.filter(w=>w.char_type_name!=='end').map(w=>w.text_indopak||w.text).join(' ');
+      }else{arEl.textContent='';}
     }
-    if(trEl&&ayahData){
-      const _rTr=(ayahData.translations&&ayahData.translations.length>0&&ayahData.translations[0].text)
-        ?ayahData.translations[0].text
-        :(ayahData.translation?ayahData.translation.text:'');
-      if(_rTr){
-        const clean=_rTr.replace(/<[^>]*>?/gm,'').replace(/^\d+\.\s*/,'').trim();
-        trEl.textContent=clean.length>90?clean.substring(0,90)+'…':clean;
-      } else {
-        trEl.textContent='';
-      }
-    } else if(trEl) {
-      trEl.textContent='';
+    if(trEl){
+      if(ayahData){
+        const _rTr=(ayahData.translations&&ayahData.translations.length>0&&ayahData.translations[0].text)?ayahData.translations[0].text:(ayahData.translation?ayahData.translation.text:'');
+        if(_rTr){const clean=_rTr.replace(/<[^>]*>?/gm,'').replace(/^\d+\.\s*/,'').trim();trEl.textContent=clean.length>90?clean.substring(0,90)+'…':clean;}
+        else{trEl.textContent='';}
+      }else{trEl.textContent='';}
     }
   },
 
@@ -2970,10 +2963,32 @@ const App={
     const s=this.s.currentSurah||1,a=this.s.currentAyah||1;
     this.loadSurah(s).then(()=>{
       setTimeout(()=>{
+        this.s.currentAyah=a;
+        this.persist('currentAyah',a);
         this.showSurah();
-        setTimeout(()=>this.scrollToAyah(a),400);
+        setTimeout(()=>this.scrollToAyah(a),80);
       },100);
     });
+  },
+
+  _updateAyahByScroll(){
+    const reader=document.getElementById('reader');
+    if(!reader)return;
+    const rTop=reader.getBoundingClientRect().top;
+    const midY=rTop+reader.clientHeight*0.35;
+    let best=null,bestDist=Infinity;
+    document.querySelectorAll('#surah-page .verse-card[data-num]').forEach(card=>{
+      const r=card.getBoundingClientRect();
+      const dist=Math.abs((r.top+r.height/2)-midY);
+      if(dist<bestDist){bestDist=dist;best=card;}
+    });
+    if(!best)return;
+    const n=parseInt(best.dataset.num);
+    if(!n||n===this.s.currentAyah)return;
+    this.s.currentAyah=n;
+    this.persist('currentAyah',n);
+    this.saveProgress(this.s.currentSurah,n);
+    this._updateFocusBar();
   },
 
   bindEvents(){
@@ -3028,7 +3043,7 @@ const App={
     });
 
     let raf=false;
-    reader.addEventListener('scroll',()=>{if(!raf){raf=true;requestAnimationFrame(()=>{const sy=reader.scrollTop,h=reader.scrollHeight-reader.clientHeight;document.getElementById('read-progress-bar').style.width=(h>0?sy/h*100:0)+'%';if(!this.s.onHomePage&&!this.s.isPlaying)this._trackScrollAyah();raf=false;});}},{passive:true});
+    reader.addEventListener('scroll',()=>{if(!raf){raf=true;requestAnimationFrame(()=>{const sy=reader.scrollTop,h=reader.scrollHeight-reader.clientHeight;document.getElementById('read-progress-bar').style.width=(h>0?sy/h*100:0)+'%';if(!this.s.onHomePage&&!this.s.isPlaying)this._updateAyahByScroll();raf=false;});}},{passive:true});
 
     let tStartX=0,tStartY=0;
     reader.addEventListener('touchstart',e=>{tStartX=e.touches[0].clientX;tStartY=e.touches[0].clientY;},{passive:true});
@@ -3699,7 +3714,9 @@ const App={
 
     document.getElementById('surah-page').innerHTML=html;
     document.getElementById('reader').scrollTop=0;
-    document.getElementById('surah-page').querySelectorAll('.verse-card').forEach(c=>this._io&&this._io.observe(c));
+    requestAnimationFrame(()=>requestAnimationFrame(()=>{
+      document.getElementById('surah-page').querySelectorAll('.verse-card').forEach(c=>{c.classList.add('visible');this._io&&this._io.observe(c);});
+    }));
     this._updateFocusBar();
   },
 
@@ -3981,15 +3998,14 @@ const App={
     const key=`${this.s.currentSurah}-${n}`;const bk={...this.s.bookmarks};
     if(bk[key]){delete bk[key];this.toast('Bookmark removed');}
     else{
-        const s=this.s.currentSurah;
-        const arEl=document.getElementById(`va-${s}-${n}`)||document.getElementById(`va-${n}`);
+        const arEl=document.getElementById(`va-${n}`);
         let arText = '';
         if(arEl) {
             arEl.querySelectorAll('.word-ar').forEach(el => arText += el.textContent + ' ');
         }
-        const meta=this.s.surahList.find(x=>x.number===s);
-        const nm=meta?meta.englishName:`Surah ${s}`;
-        bk[key]={surah:s,ayah:n,ar:arText.trim(),ts:Date.now(),mode:'reader',label:`${nm} · ${n}`};
+        const meta=this.s.surahList.find(x=>x.number===this.s.currentSurah);
+        const nm=meta?meta.englishName:`Surah ${this.s.currentSurah}`;
+        bk[key]={surah:this.s.currentSurah,ayah:n,ar:arText.trim(),ts:Date.now(),mode:'reader',label:`${nm} · ${n}`};
         this.toast('Bookmarked ✦');navigator.vibrate&&navigator.vibrate(6);
     }
     this.persist('bookmarks',bk);
@@ -4039,70 +4055,29 @@ const App={
   },
   deleteBk(key){const bk={...this.s.bookmarks};delete bk[key];this.persist('bookmarks',bk);this.renderBookmarks();this.toast('Bookmark removed');},
   goToBk(surah,ayah){
-    document.getElementById('bookmark-panel').classList.remove('open');document.getElementById('bk-overlay').classList.remove('active');
-    const jump=()=>{
-      this.showSurah();
+    // Close panel first
+    document.getElementById('bookmark-panel').classList.remove('open');
+    document.getElementById('bk-overlay').classList.remove('active');
+    history.replaceState({noor:'surah'},'');
+    const reveal=()=>{
+      this.s.currentAyah=ayah;
+      this.persist('currentAyah',ayah);
+      this.s.onHomePage=false;
+      document.getElementById('home-page').style.display='none';
+      document.getElementById('surah-page').style.display='block';
+      if(this.uiVisible)document.getElementById('tr-mode-bar').classList.add('visible');
+      document.getElementById('surah-page').querySelectorAll('.verse-card').forEach(c=>c.classList.add('visible'));
       setTimeout(()=>{
         this.scrollToAyah(ayah);
-        const c=document.getElementById(`vc-${surah}-${ayah}`)||document.getElementById(`vc-${ayah}`);
-        if(c){c.classList.add('active-verse','visible');setTimeout(()=>{if(!this.s.isPlaying||this.s.currentAyah!==ayah)c.classList.remove('active-verse');},3000);}
+        const c=document.getElementById(`vc-${ayah}`);
+        if(c){c.classList.add('active-verse');setTimeout(()=>{if(!this.s.isPlaying||this.s.currentAyah!==ayah)c.classList.remove('active-verse');},3000);}
       },80);
     };
-    if(surah!==this.s.currentSurah){
-      this.loadSurah(surah).then(()=>setTimeout(jump,700));
-    } else {
-      jump();
-    }
+    // Always reload to guarantee surah-page has content (may be empty on first open)
+    this.loadSurah(surah).then(()=>setTimeout(reveal,100));
   },
   exportBookmarks(){const d=JSON.stringify(this.s.bookmarks,null,2);const b=new Blob([d],{type:'application/json'});const u=URL.createObjectURL(b);const a=document.createElement('a');a.href=u;a.download='noor-bookmarks.json';a.click();URL.revokeObjectURL(u);this.toast('Bookmarks exported');},
-  scrollToAyah(n){
-    const s=this.s.currentSurah;
-    const c=document.getElementById(`vc-${s}-${n}`)||document.getElementById(`vc-${n}`);
-    if(c){
-      c.classList.add('visible');
-      setTimeout(()=>c.scrollIntoView({behavior:'smooth',block:'center'}),80);
-    }
-  },
-  _trackScrollAyah(){
-    const reader=document.getElementById('reader');
-    if(!reader)return;
-    const readerRect=reader.getBoundingClientRect();
-    const centerY=readerRect.top+readerRect.height*0.38;
-    let bestEl=null,bestDist=Infinity;
-    document.querySelectorAll('.verse-card[data-num]').forEach(card=>{
-      const rect=card.getBoundingClientRect();
-      const cardCenter=rect.top+rect.height/2;
-      const dist=Math.abs(cardCenter-centerY);
-      if(dist<bestDist){bestDist=dist;bestEl=card;}
-    });
-    if(!bestEl)return;
-    const n=parseInt(bestEl.dataset.num);
-    const s=bestEl.dataset.surah?parseInt(bestEl.dataset.surah):this.s.currentSurah;
-    if(isNaN(n)||isNaN(s))return;
-    if(s===this.s.currentSurah&&n!==this.s.currentAyah){
-      this.s.currentAyah=n;
-      this.persist('currentAyah',n);
-      this.persist('currentSurah',s);
-      this.saveProgress(s,n);
-      this._updateFocusBar();
-      this._updateContinueCardFromMeta(s,n);
-    }
-  },
-  _updateContinueCardFromMeta(s,a){
-    const meta=this.s.surahList.find(x=>x.number===s);
-    const nm=meta?meta.englishName:`Surah ${s}`;
-    const juz=getJuz(s,a);
-    const elSet=(id,txt)=>{const e=document.getElementById(id);if(e)e.textContent=txt;};
-    elSet('continue-name',nm);
-    elSet('continue-meta',`Surah ${s} · Ayah ${a} · Juz ${juz}`);
-    const arEl=document.getElementById(`va-${s}-${a}`)||document.getElementById(`va-${a}`);
-    const contAr=document.getElementById('continue-ar');
-    if(contAr&&arEl){
-      let arText='';
-      arEl.querySelectorAll('.word-ar').forEach(el=>arText+=el.textContent+' ');
-      if(arText.trim())contAr.textContent=arText.trim();
-    }
-  },
+  scrollToAyah(n){const c=document.getElementById(`vc-${n}`);if(c){c.classList.add('visible');setTimeout(()=>c.scrollIntoView({behavior:'smooth',block:'center'}),80);}},
 
   openNote(n){
     this._noteAyah=n;const key=`${this.s.currentSurah}-${n}`;
